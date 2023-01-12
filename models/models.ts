@@ -25,4 +25,12 @@ export interface provInt {
   nome: string;
   descrizione: string[];
   img: string;
+  dataPres: {
+    indicatori: string;
+    alloggio: string;
+    paeseRes: string;
+    value: number;
+    anno: number;
+    mese: number;
+  }[];
 }
