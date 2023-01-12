@@ -9,9 +9,11 @@ const regions_route_1 = __importDefault(require("./routes/regions.route"));
 const prov_route_1 = __importDefault(require("./routes/prov.route"));
 dotenv_1.default.config({ path: "./config.env" });
 const morgan = require("morgan");
+const cors = require('cors');
 const app = (0, express_1.default)();
 const port = process.env.PORT;
 app.use(morgan("dev"));
+app.use(cors());
 app.use('/api/v1/regions', prov_route_1.default);
 app.use('/api/v1/regions', regions_route_1.default);
 app.get("/", (req, res) => {
